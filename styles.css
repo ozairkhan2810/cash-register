@@ -96,24 +96,29 @@ td {
 
 footer {
   text-align: center;
+  background-color: rgb(36, 56, 145);
+  width: 50%;
+  margin: auto;
+  border-radius: 1rem;
 }
 
 footer p {
+    padding-top: 2rem;
   font-size: large;
   text-align: center;
 }
 
-.footer-list {
-  margin: 1rem;
+footer ul {
+  padding: 2rem;
 }
 
-a,
-img,
-li {
+.links {
+  text-decoration: none;
+  color: #000;
+  padding: 1rem;
+}
+
+a, li {
   display: inline;
-}
-
-img {
-  width: 40px;
-  padding: 0.2rem;
+  color: #fff;
 }
