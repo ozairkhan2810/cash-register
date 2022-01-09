@@ -19,7 +19,7 @@ let showMessage = msg => {
     message.innerText = msg;
 }
 
-checkButton.addEventListener("click", function validateBillAndCashAmount() {
+checkButton.addEventListener("click", () => {
     message.style.display = "none";
     if( billAmount.value > 0) {
         if(cashGiven.value === billAmount.value){
