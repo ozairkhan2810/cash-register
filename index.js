@@ -6,6 +6,19 @@ var noOfNotes = document.querySelectorAll(".no-of-notes");
 
 const notes = [2000, 500, 100, 20, 10, 5, 1];
 
+let calculateChange = amountToBeReturned => {
+    for(let i=0; i<notes.length; i++) {
+        const numberOfNotes = Math.trunc(amountToBeReturned / notes[i]);
+        amountToBeReturned %= notes[i];
+        noOfNotes[i].innerText = numberOfNotes;
+    }
+}
+
+let showMessage = msg => {
+    message.style.display = "block";
+    message.innerText = msg;
+}
+
 checkButton.addEventListener("click", function validateBillAndCashAmount() {
     message.style.display = "none";
     if( billAmount.value > 0) {
@@ -22,17 +35,4 @@ checkButton.addEventListener("click", function validateBillAndCashAmount() {
         showMessage("Invalid bill amount");
     }
 });
-
-function calculateChange(amountToBeReturned) {
-    for(let i=0; i<notes.length; i++) {
-        const numberOfNotes = Math.trunc(amountToBeReturned / notes[i]);
-        amountToBeReturned %= notes[i];
-        noOfNotes[i].innerText = numberOfNotes;
-    }
-}
-
-function showMessage(msg) {
-    message.style.display = "block";
-    message.innerText = msg;
-}
 
